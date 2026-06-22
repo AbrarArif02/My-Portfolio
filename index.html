@@ -15,24 +15,24 @@
 
 <div id="topbar">
   <div class="topbar-left">
-    <a class="topbar-logo" href="#">Abrar Arif</a>
+    <a class="topbar-logo" href="#" onclick="go(0);return false;">Abrar Arif</a>
   </div>
   <div class="topbar-center">
-    <button class="topbar-btn active">Home</button>
-    <button class="topbar-btn">About</button>
-    <button class="topbar-btn">Projects</button>
-    <button class="topbar-btn">Skills</button>
-    <button class="topbar-btn">Contact</button>
+    <button class="topbar-btn active" onclick="go(0)">Home</button>
+    <button class="topbar-btn" onclick="go(1)">About</button>
+    <button class="topbar-btn" onclick="go(2)">Projects</button>
+    <button class="topbar-btn" onclick="go(3)">Skills</button>
+    <button class="topbar-btn" onclick="go(4)">Contact</button>
   </div>
 </div>
 
 
 <div id="left-panel">
-  <div class="sdot active"></div>
-  <div class="sdot"></div>
-  <div class="sdot"></div>
-  <div class="sdot"></div>
-  <div class="sdot"></div>
+  <div class="sdot active" onclick="go(0)"></div>
+  <div class="sdot"        onclick="go(1)"></div>
+  <div class="sdot"        onclick="go(2)"></div>
+  <div class="sdot"        onclick="go(3)"></div>
+  <div class="sdot"        onclick="go(4)"></div>
 </div>
 
 
@@ -54,8 +54,8 @@
         </div>
 
         <div class="s1-show-btn">
-          <a class="s1-view-btn" href="#">View Projects</a>
-          <a class="s1-view-btn-cv" href="AbrarArif_CV.pdf" download="AbrarArif_CV.pdf">
+          <a class="s1-view-btn" onclick="go(2);return false;" href="#">View Projects</a>
+          <a class="s1-cv-btn" href="AbrarArif_CV.pdf" download="AbrarArif_CV.pdf">
             <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7.5 2v7.5M4.5 7l3 3 3-3"/>
               <path d="M2.5 11v1.5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V11"/>
@@ -119,6 +119,115 @@
     </div>
   </div>
 </div>
+
+
+<div class="slide" id="s2">
+  <div class="slide-body">
+    <div class="s2-intro">
+      <div class="s2-biodata">
+        <div class="s2-bio-title">The person behind the work</div>
+        <p class="s2-bio-text">
+          Hi, I'm Abrar Arif, an undergraduate Computer Science and Engineering student with a passion for programming, 
+          problem-solving, and software development. I enjoy exploring Data Structures, Algorithms, Object-Oriented Programming, 
+          and Competitive Programming to strengthen my analytical and logical thinking skills.
+          <br><br>
+          Alongside my academic journey, I build web applications using modern technologies and continuously expand my knowledge 
+          of computer science concepts. I am always eager to take on new challenges, learn emerging technologies, and improve as a developer.
+          <br><br>
+          My goal is to combine strong problem-solving abilities with practical development skills to create efficient, reliable, 
+          and impactful software solutions.
+        </p>
+        <a class="s2-cv-link" href="AbrarArif_CV.pdf" download="AbrarArif_CV.pdf">Download CV / Résumé →</a>
+      </div>
+      <div class="s2-stats-panel">
+        <div class="s2-stats-label">At a glance</div>
+        <div class="s2-stats-grid">
+          <div class="s2-stat">
+            <div class="s2-stat-n">5<em>+</em></div>
+            <div class="s2-stat-l">Projects Built</div>
+          </div>
+
+          <div class="s2-stat">
+            <div class="s2-stat-n">200<em>+</em></div>
+            <div class="s2-stat-l">Problems Solved</div>
+          </div>
+
+          <div class="s2-stat">
+            <div class="s2-stat-n">4<em>+</em></div>
+            <div class="s2-stat-l">Competition Participated</div>
+          </div>
+
+          <div class="s2-stat">
+            <div class="s2-stat-n">2<em>+</em></div>
+            <div class="s2-stat-l">Years Coding</div>
+          </div>
+        </div>
+
+        <div class="s2-scroll-point"><div class="s2-arrow"></div>Scroll to see skills & education</div>
+      </div>
+    </div>
+
+    <div class="s2-skills-section">
+      <div class="s2-section-label">My Skills</div>
+      <div class="s2-skills-bar">
+        <span class="s2-skill">HTML / CSS</span>
+        <span class="s2-skill">JavaScript</span>
+        <span class="s2-skill">React</span>
+        <span class="s2-skill">Next.js</span>
+        <span class="s2-skill">Tailwind CSS</span>
+        <span class="s2-skill">Node.js</span>
+        <span class="s2-skill">C++</span>
+        <span class="s2-skill">Python</span>
+        <span class="s2-skill">Data Structures</span>
+        <span class="s2-skill">Algorithms</span>
+        <span class="s2-skill">OOP</span>
+        <span class="s2-skill">Git / GitHub</span>
+        <span class="s2-skill">Figma</span>
+        <span class="s2-skill">Competitive Programming</span>
+      </div>
+    </div>
+
+    <div class="s2-education-section">
+      <div class="s2-section-label">My Education</div>
+      <div class="edu-info">
+        <div class="edu-year">2025–Now</div>
+        <div class="edu-content">
+          <div class="edu-role">BSc. in Computer Science & Engineering</div>
+          <div class="edu-name">International Islamic University Chittagong · Bangladesh</div>
+          <div class="edu-description">Currently pursuing undergraduate studies with a focus on Data Structures, Algorithms, Competitive Programming, Problem Solving, and Software Development.</div>
+        </div>
+      </div>
+
+      <div class="edu-info">
+        <div class="edu-year">2022–23</div>
+        <div class="edu-content">
+          <div class="edu-role">Higher Secondary Certificate (H.S.C)</div>
+          <div class="edu-name">Islamia Degree College · Bangladesh</div>
+          <div class="edu-description">Completed higher secondary education with a concentration in Science, developing analytical thinking and a strong foundation in mathematics and technology.</div>
+        </div> 
+      </div>
+
+      <div class="edu-info">
+        <div class="edu-year">2019–21</div>
+        <div class="edu-content">
+          <div class="edu-role">Secondary School Certificate (S.S.C)</div>
+          <div class="edu-name">Chittagong Ideal High School · Bangladesh</div>
+          <div class="edu-description">Built a solid academic foundation through science studies while developing curiosity, discipline, and problem-solving skills.</div>
+        </div>
+      </div>
+      
+      <div class="edu-info">
+        <div class="edu-year">2018</div>
+        <div class="edu-content">
+          <div class="edu-role">Junior School Certificate (J.S.C)</div>
+          <div class="edu-name">Chittagong Ideal High School · Bangladesh</div>
+          <div class="edu-description">Successfully completed junior secondary education, establishing fundamental academic skills and a passion for learning.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </div>
 <script src="script.js"></script>
