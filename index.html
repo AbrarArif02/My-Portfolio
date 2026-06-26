@@ -36,9 +36,9 @@
 </div>
 
 
-<div id="section">
+<div id="full-section">
 
-<div class="slide active" id="s1">
+<section class="slide active" id="s1">
   <div class="slide-body">
     <div class="s1-grid">
       <div class="s1-left">
@@ -55,7 +55,7 @@
 
         <div class="s1-show-btn">
           <a class="s1-view-btn" onclick="go(2);return false;" href="#">View Projects</a>
-          <a class="s1-cv-btn" href="AbrarArif_CV.pdf" download="AbrarArif_CV.pdf">
+          <a class="s1-cv-btn" href="Demo.pdf" target="_blank" download="Demo.pdf">
             <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7.5 2v7.5M4.5 7l3 3 3-3"/>
               <path d="M2.5 11v1.5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V11"/>
@@ -118,10 +118,10 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 
-<div class="slide" id="s2">
+<section class="slide" id="s2">
   <div class="slide-body">
     <div class="s2-intro">
       <div class="s2-biodata">
@@ -137,7 +137,7 @@
           My goal is to combine strong problem-solving abilities with practical development skills to create efficient, reliable, 
           and impactful software solutions.
         </p>
-        <a class="s2-cv-link" href="AbrarArif_CV.pdf" download="AbrarArif_CV.pdf">Download CV / Résumé →</a>
+        <a class="s2-cv-link" href="Demo.pdf" download="Demo.pdf">Download CV / Résumé</a>
       </div>
       <div class="s2-stats-panel">
         <div class="s2-stats-label">At a glance</div>
@@ -168,7 +168,7 @@
     </div>
 
     <div class="s2-skills-section">
-      <div class="s2-section-label">My Skills</div>
+      <div class="s2-section-label">Skills</div>
       <div class="s2-skills-bar">
         <span class="s2-skill">HTML / CSS</span>
         <span class="s2-skill">JavaScript</span>
@@ -188,48 +188,105 @@
     </div>
 
     <div class="s2-education-section">
-      <div class="s2-section-label">My Education</div>
-      <div class="edu-info">
-        <div class="edu-year">2025–Now</div>
-        <div class="edu-content">
-          <div class="edu-role">BSc. in Computer Science & Engineering</div>
-          <div class="edu-name">International Islamic University Chittagong · Bangladesh</div>
-          <div class="edu-description">Currently pursuing undergraduate studies with a focus on Data Structures, Algorithms, Competitive Programming, Problem Solving, and Software Development.</div>
+      <div class="s2-section-label">Education</div>
+      <div class="s2-education-grid">
+        <div class="edu-card">
+          <div class="edu-year">2025–NOW</div>
+          <div class="edu-content">
+            <div class="edu-role">BSc. in Computer Science & Engineering</div>
+            <div class="edu-name">International Islamic University Chittagong · Bangladesh</div>
+            <div class="edu-description">Currently pursuing undergraduate studies with a focus on Data Structures, Algorithms, Competitive Programming, Problem Solving, and Software Development.</div>
+            <div class="edu-result">
+              <div class="edu-result-cell">
+                <div class="edu-result-label">CGPA</div>
+                <div class="edu-result-value"><em>3.72</em> / 4.00</div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Grade</div>
+                <div class="edu-result-value"><em>A</em></div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Status</div>
+                <div class="edu-result-value">Running</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="edu-info">
-        <div class="edu-year">2022–23</div>
-        <div class="edu-content">
-          <div class="edu-role">Higher Secondary Certificate (H.S.C)</div>
-          <div class="edu-name">Islamia Degree College · Bangladesh</div>
-          <div class="edu-description">Completed higher secondary education with a concentration in Science, developing analytical thinking and a strong foundation in mathematics and technology.</div>
-        </div> 
-      </div>
-
-      <div class="edu-info">
-        <div class="edu-year">2019–21</div>
-        <div class="edu-content">
-          <div class="edu-role">Secondary School Certificate (S.S.C)</div>
-          <div class="edu-name">Chittagong Ideal High School · Bangladesh</div>
-          <div class="edu-description">Built a solid academic foundation through science studies while developing curiosity, discipline, and problem-solving skills.</div>
+        <div class="edu-card">
+          <div class="edu-year">2021–23</div>
+          <div class="edu-content">
+            <div class="edu-role">Higher Secondary Certificate (H.S.C)</div>
+            <div class="edu-name">Islamia Degree College · Bangladesh</div>
+            <div class="edu-description">Completed higher secondary education with a concentration in Science, developing analytical thinking and a strong foundation in mathematics and technology.</div>
+            <div class="edu-result">
+              <div class="edu-result-cell">
+                <div class="edu-result-label">GPA</div>
+                <div class="edu-result-value"><em>4.08</em> / 5.00</div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Grade</div>
+                <div class="edu-result-value"><em>A</em></div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Group</div>
+                <div class="edu-result-value">Science</div>
+              </div>
+            </div>
+          </div> 
         </div>
-      </div>
+
+        <div class="edu-card">
+          <div class="edu-year">2019–21</div>
+          <div class="edu-content">
+            <div class="edu-role">Secondary School Certificate (S.S.C)</div>
+            <div class="edu-name">Chittagong Ideal High School · Bangladesh</div>
+            <div class="edu-description">Built a solid academic foundation through science studies while developing curiosity, discipline, and problem-solving skills.</div>
+            <div class="edu-result">
+              <div class="edu-result-cell">
+                <div class="edu-result-label">GPA</div>
+                <div class="edu-result-value"><em>4.58</em> / 5.00</div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Grade</div>
+                <div class="edu-result-value"><em>A</em></div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Group</div>
+                <div class="edu-result-value">Science</div>
+              </div>
+            </div>
+          </div>
+        </div>
       
-      <div class="edu-info">
-        <div class="edu-year">2018</div>
-        <div class="edu-content">
-          <div class="edu-role">Junior School Certificate (J.S.C)</div>
-          <div class="edu-name">Chittagong Ideal High School · Bangladesh</div>
-          <div class="edu-description">Successfully completed junior secondary education, establishing fundamental academic skills and a passion for learning.</div>
+        <div class="edu-card">
+          <div class="edu-year">2018</div>
+          <div class="edu-content">
+            <div class="edu-role">Junior School Certificate (J.S.C)</div>
+            <div class="edu-name">Chittagong Ideal High School · Bangladesh</div>
+            <div class="edu-description">Successfully completed junior secondary education, establishing fundamental academic skills and a passion for learning.</div>
+            <div class="edu-result">
+              <div class="edu-result-cell">
+                <div class="edu-result-label">GPA</div>
+                <div class="edu-result-value"><em>4.83</em> / 5.00</div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Grade</div>
+                <div class="edu-result-value"><em>A</em></div>
+              </div>
+              <div class="edu-result-cell">
+                <div class="edu-result-label">Group</div>
+                <div class="edu-result-value">Science</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </div>  
     </div>
   </div>
-</div>
-
+</section>
 
 </div>
 <script src="script.js"></script>
 </body>
-</html>  
+</html> 
