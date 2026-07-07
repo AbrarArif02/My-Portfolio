@@ -25,7 +25,7 @@ const dots    = [...document.querySelectorAll('.sdot')];
 
 let current = 0;    
 let isAnimating = false; 
-const Duration = 500;     
+const Duration = 800;     
 
 function go(next) {
 
@@ -55,6 +55,11 @@ function go(next) {
   dots.forEach((dot, i) => dot.classList.toggle('active', i === next));
 
 
+  const topbarTeal = document.getElementById('topbar-teal');
+  if (topbarTeal) {
+    topbarTeal.classList.toggle('hide', next !== 0);
+  }
+
   setTimeout(() => {
     leaving.classList.remove('active', exitClass);
     leaving.style.opacity = '0';
@@ -65,5 +70,6 @@ function go(next) {
 
     current = next;
     isAnimating = false;
+
   }, Duration);
 }

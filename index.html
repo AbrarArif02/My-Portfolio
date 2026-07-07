@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abrar Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;1,400;1,600&family=Bree+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,17 +26,8 @@
     <button class="topbar-btn" onclick="go(3)">Skills</button>
     <button class="topbar-btn" onclick="go(4)">Contact</button>
   </div>
+  <div class="topbar-teal" id="topbar-teal"></div>
 </div>
-
-
-<div id="left-panel">
-  <div class="sdot active" onclick="go(0)"></div>
-  <div class="sdot"        onclick="go(1)"></div>
-  <div class="sdot"        onclick="go(2)"></div>
-  <div class="sdot"        onclick="go(3)"></div>
-  <div class="sdot"        onclick="go(4)"></div>
-</div>
-
 
 <div id="full-section">
 
@@ -53,22 +46,6 @@
           <p class="s1-description">Currently pursuing a degree in Computer Science and Engineering at International Islamic University Chittagong (IIUC). Passionate about solving complex problems through efficient algorithms while exploring Data Structures, OOP, and Competitive Programming.</p>
         </div>
 
-        <div class="s1-show-btn">
-          <a class="s1-view-btn" onclick="go(2);return false;" href="#">View Projects</a>
-          <a class="s1-cv-btn" href="Demo.pdf" target="_blank" download="Demo.pdf">
-            <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7.5 2v7.5M4.5 7l3 3 3-3"/>
-              <path d="M2.5 11v1.5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V11"/>
-            </svg>
-            <span>CV / Résumé</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="s1-right">
-        <div class="photo-frame">
-          <img src="Asset/78154.jpg" alt="Abrar Arif">
-        </div>
         <div class="social-part">
           <a class="soc-link" href="https://facebook.com/yourusername" target="_blank" title="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -93,29 +70,28 @@
               <path d="M3 3h7l11 18H14z" stroke-linejoin="round"/>
             </svg>
           </a>
-          <a class="soc-link" href="https://instagram.com/yourusername" target="_blank" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/>
+        </div>
+
+        <div class="s1-show-btn">
+          <a class="s1-view-btn" onclick="go(2);return false;" href="#">View Projects</a>
+          <a class="s1-cv-btn" href="AbrarArif_CV.pdf" download="AbrarArif_CV.pdf">
+            <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7.5 2v7.5M4.5 7l3 3 3-3"/>
+              <path d="M2.5 11v1.5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V11"/>
             </svg>
-          </a>
-          <a class="soc-link" href="https://codeforces.com/profile/yourusername" target="_blank" title="Codeforces">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-              <rect x="2" y="10" width="4" height="12" rx="1"/>
-              <rect x="10" y="4" width="4" height="18" rx="1"/>
-              <rect x="18" y="7" width="4" height="15" rx="1"/>
-            </svg>
-          </a>
-          <a class="soc-link" href="https://leetcode.com/yourusername" target="_blank" title="LeetCode">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 18L22 12L16 6"/>
-              <path d="M8 6L2 12L8 18"/>
-              <line x1="13" y1="4" x2="11" y2="20"/>
-            </svg>
+            <span>CV / Résumé</span>
           </a>
         </div>
       </div>
+
+      <div class="s1-right">
+        <div class="teal-frame"></div>
+        <div class="photo-outline"></div>
+        <div class="photo-frame">
+          <img src="Asset/1.jpg" alt="Abrar Arif" class="photo">
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
