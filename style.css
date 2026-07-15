@@ -1360,24 +1360,26 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 
-#s5 {
+
+
+#s8 {
     background: var(--White);
 }
 
-.s5-body {
+.s8-body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
 }
 
-.s5-left {
+.s8-left {
     padding: 75px 38px 100px 55px;
     display: flex;
     flex-direction: column;
 }
 
-.s5-pretitle {
+.s8-pretitle {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.9rem;
     font-weight: 500;
@@ -1390,7 +1392,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     gap: 15px;
 }
 
-.s5-pretitle::before {
+.s8-pretitle::before {
     content: '';
     width: 42px;
     height: 4px;
@@ -1398,7 +1400,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     background: var(--Aqua);
 }
 
-.s5-title {
+.s8-title {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: clamp(2.4rem, 5vw, 4.5rem);
@@ -1407,17 +1409,17 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     margin-bottom: 35px;
 }
 
-.s5-title .s5-big-out {
+.s8-title .s8-big-out {
     -webkit-text-stroke: 2px var(--Black);
     color: transparent;
     display: block;
 }
 
-.s5-email-block {
+.s8-email-block {
     margin-bottom: 32px;
 }
 
-.s5-email-label {
+.s8-email-label {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8rem;
     font-weight: 500;
@@ -1427,7 +1429,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     margin-bottom: 8px;
 }
 
-.s5-email {
+.s8-email {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
@@ -1441,15 +1443,15 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     transition: color .25s;
 }
 
-.s5-email:hover {
+.s8-email:hover {
     color: var(--Aqua);
 }
 
-.s5-email svg {
-    margin-top: 3px;
+.s8-email svg {
+    margin-top: 2px;
 }
 
-.s5-social-label {
+.s8-social-label {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.7rem;
     font-weight: 500;
@@ -1459,14 +1461,14 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     margin-bottom: 14px;
 }
 
-.s5-icons-row {
+.s8-icons-row {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin-left: -3px;
 }
 
-.s5-icon-link {
+.s8-icon-link {
     width: 50px;
     height: 50px;
     border: 4px solid var(--Lightblue);
@@ -1479,25 +1481,25 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     transition: border-color .2s, color .2s, transform .2s;
 }
 
-.s5-icon-link:hover {
+.s8-icon-link:hover {
     border-color: var(--Aqua);
     color: var(--Aqua);
     transform: translateY(-3px);
 }
 
-.s5-icon-link svg {
+.s8-icon-link svg {
     width: 20px;
     height: 20px;
     color: var(--Black);
 }
 
-.s5-right {
+.s8-right {
     display: flex;
     flex-direction: column;
     background: var(--White);
 }
 
-.s5-form-wrap {
+.s8-form-wrap {
     flex: 1;
     padding: 0 55px 40px 0;
     display: flex;
@@ -1505,7 +1507,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     justify-content: center;
 }
 
-.s5-form-title {
+.s8-form-title {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
@@ -1605,7 +1607,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     transform: scaleX(1);
 }
 
-.s5-footer {
+.s8-footer {
     grid-column: 1 / -1;
     background: var(--Lightblue);
     padding: 12px 48px;
