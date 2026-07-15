@@ -19,6 +19,8 @@ function loop() {
 loop();
 
 
+
+
 const slides = [...document.querySelectorAll('.slide')];
 const topBars = [...document.querySelectorAll('.topbar-btn')];
 const dots    = [...document.querySelectorAll('.sdot')];
@@ -72,4 +74,24 @@ function go(next) {
     isAnimating = false;
 
   }, Duration);
+}
+
+
+
+function sendMsg() {
+  const n = document.getElementById('fn').value;
+  const e = document.getElementById('fe').value;
+  const m = document.getElementById('fm').value;
+
+  if (!n || !e || !m) { 
+    alert('Please fill all fields.'); 
+    return; 
+  }
+
+  document.getElementById('formWrap').innerHTML =
+     `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:2rem;color:var(--Aqua);">✓</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--Black)">Message Received</div>
+        <div style="font-family:'Lora',serif;font-style:italic;font-size:0.8rem;color:var(--Gray)">I'll reply within 24 hours.</div>
+      </div>`;
 }
