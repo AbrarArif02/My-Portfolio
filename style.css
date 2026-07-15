@@ -1358,3 +1358,262 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     width: 40px;
     height: 40px;
 }
+
+
+#s5 {
+    background: var(--White);
+}
+
+.s5-body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+.s5-left {
+    padding: 75px 38px 100px 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.s5-pretitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--Black);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.s5-pretitle::before {
+    content: '';
+    width: 42px;
+    height: 4px;
+    border-radius: 50px;
+    background: var(--Aqua);
+}
+
+.s5-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    margin-bottom: 35px;
+}
+
+.s5-title .s5-big-out {
+    -webkit-text-stroke: 2px var(--Black);
+    color: transparent;
+    display: block;
+}
+
+.s5-email-block {
+    margin-bottom: 32px;
+}
+
+.s5-email-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--Gray);
+    margin-bottom: 8px;
+}
+
+.s5-email {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--Black);
+    text-decoration: none;
+    cursor: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color .25s;
+}
+
+.s5-email:hover {
+    color: var(--Aqua);
+}
+
+.s5-email svg {
+    margin-top: 3px;
+}
+
+.s5-social-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--Gray);
+    margin-bottom: 14px;
+}
+
+.s5-icons-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: -3px;
+}
+
+.s5-icon-link {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--Lightblue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: none;
+    transition: border-color .2s, color .2s, transform .2s;
+}
+
+.s5-icon-link:hover {
+    border-color: var(--Aqua);
+    color: var(--Aqua);
+    transform: translateY(-3px);
+}
+
+.s5-icon-link svg {
+    width: 20px;
+    height: 20px;
+    color: var(--Black);
+}
+
+.s5-right {
+    display: flex;
+    flex-direction: column;
+    background: var(--White);
+}
+
+.s5-form-wrap {
+    flex: 1;
+    padding: 0 55px 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s5-form-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+    color: var(--Black);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.form-field.form-msg {
+    margin-bottom: 30px;
+}
+
+.form-field-label {
+    font-family: 'Syne', serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--Black);
+}
+
+.form-field input, .form-field textarea {
+    background: var(--White);
+    border: 3px solid var(--Lightblue);
+    color: var(--Black);
+    padding: 15px 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    outline: none;
+    width: 100%;
+    transition: border-color .2s, background .2s;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    border-color: var(--Aqua);
+    background: var(--White);
+}
+
+.form-field input::placeholder, .form-field textarea::placeholder {
+    color: var(--Gray);
+}
+
+.form-field textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-send-btn {
+    width: 100%;
+    padding: 18px 24px;
+    background: var(--Black);
+    color: var(--White);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--Black);
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    transition: color .4s, border-color .4s, transform .2s;
+    z-index: 0;
+}
+
+.form-send-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--Aqua);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s var(--ease);
+    z-index: -1;
+}
+
+.form-send-btn:hover {
+    color: var(--Black);
+    border-color: var(--Aqua);
+}
+
+.form-send-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.s5-footer {
+    grid-column: 1 / -1;
+    background: var(--Lightblue);
+    padding: 12px 48px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--Black);
+    letter-spacing: 0.06em;
+    display: flex;
+    justify-content: center;
+}
