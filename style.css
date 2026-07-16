@@ -168,8 +168,8 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .topbar-teal {
     position: absolute;
     top: 0;
-    right: 2.95%;
-    width: 260px;
+    right: 2.8%;
+    width: 286px;
     height: 100%;
     background: var(--Aqua);
     z-index: 1;
@@ -187,7 +187,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .topbar-left {
     display: flex;
     align-items: center;
-    padding: 50px 50px 50px 50px;
+    padding: 50px 50px 50px 53px;
     margin-top: 10px;
     height: 100%;
     flex-shrink: 0;
@@ -197,7 +197,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     letter-spacing: -0.02em;
     color: var(--Black);
     text-decoration: none;
@@ -210,13 +210,13 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     align-items: center;
     height: 100%;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .topbar-btn {
     position: relative;
     z-index: 2;
-    padding: 15px 28px;
+    padding: 8px 18px;
     display: flex;
     align-items: center;
     font-family: 'Syne', sans-serif;
@@ -233,13 +233,18 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     transition: background .2s, color .2s;
 }
 
+.topbar-btn svg {
+    width:25px;
+    height: 25px;
+}
+
 .topbar-btn:last-child {
     margin-right: 20px;
 }
 
 .topbar-btn:hover {
     background: var(--Aqua);
-    color: var(--Black);
+    color: var(--White);
 }
 
 .topbar-btn.active {
@@ -247,6 +252,30 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     color: var(--White);
 }
 
+.topbar-btn::after {
+    content: attr(data-label);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--Black);
+    color: var(--White);
+    font-family: 'Syne', serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 300;
+}
+
+.topbar-btn:hover::after {
+    opacity: 1;
+}
 
 .slide-body {
     position: absolute;
@@ -486,8 +515,8 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .teal-frame {
     position: absolute;
     top: 0;
-    left: 5.5%;
-    width: 100%;
+    left: -3.5%;
+    width: 110%;
     height: 70%;
     background: var(--Aqua);
     border-radius: 0 0 170px 170px;
@@ -495,20 +524,20 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .photo-outline {
     position: absolute;
-    top: 0;
-    right: 27%;
-    width: 278px;
-    height: 80%;
-    border: 2px solid var(--Aqua);
+    top: -0.5%;
+    right: 31%;
+    width: 310px;
+    height: 86%;
+    border: 3px solid var(--Aqua);
     border-radius: 170px;
 }
 
 .photo-frame {
     position: absolute;
     top: 15px;
-    right: 31%;
-    width: 250px;
-    height: 75%;
+    right: 35%;
+    width: 280px;
+    height: 80%;
 }
 
 .photo {
@@ -519,9 +548,8 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     position: relative;
     z-index: 2;
     box-shadow: 
-    0px 8px 10px -6px rgba(0, 0, 0, 0.20),
-    0px 20px 25px -5px rgba(0, 0, 0, 0.10),
-    0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .photo-outline {
