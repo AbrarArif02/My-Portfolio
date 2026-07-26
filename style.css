@@ -885,7 +885,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .edu-card {
     background: var(--card-bg);
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 60px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.30), 0px 1px 3px 1px rgba(0,0,0,0.15);
     overflow: hidden;
@@ -1412,7 +1412,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s5-watermark {
     position: absolute;
-    top: 1.2%;
+    top: 1.15%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Bree Serif', serif;
@@ -1427,7 +1427,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .s5-inner {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -1516,7 +1516,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .node-card {
     text-align: center;
-    background: var(--Lightblue);
+    background: var(--card-bg);
     border-radius: 10px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.30), 0px 1px 3px 1px rgba(0,0,0,0.15);
     padding: 50px 40px;
@@ -1561,7 +1561,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     font-weight: 500;
     letter-spacing: 0.25rem;
     color: var(--Black);
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .node-description {
@@ -1570,7 +1570,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     font-size: 20px;
     line-height: 1.6;
     color: var(--Black);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .node-tag {
@@ -1598,7 +1598,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .s8-left {
-    padding: 75px 38px 40px 55px;
+    padding: 60px 38px 40px 55px;
     display: flex;
     flex-direction: column;
 }
@@ -1630,7 +1630,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     font-size: clamp(2.4rem, 5vw, 4.5rem);
     letter-spacing: -0.04em;
     line-height: 0.95;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .s8-title .s8-big-out {
@@ -1640,12 +1640,12 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .s8-email-block {
-    margin-bottom: 32px;
+    margin-bottom: 25px;
 }
 
 .s8-email-label {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1656,7 +1656,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .s8-email {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.15em;
     color: var(--Black);
     text-decoration: none;
@@ -1677,12 +1677,12 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s8-social-label {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--Gray);
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .s8-icons-row {
@@ -1725,7 +1725,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s8-form-wrap {
     flex: 1;
-    padding: 30px 55px 40px 0;
+    padding: 30px 55px 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
