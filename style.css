@@ -71,7 +71,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 #full-section {
     position: fixed;
-    top: 80px;
+    top: 90px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -162,7 +162,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 90px;
 }
 
 .topbar-teal {
@@ -197,7 +197,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 1.8rem;
-    margin-bottom: 9px;
+    margin-bottom: 11px;
     letter-spacing: -0.02em;
     color: var(--Black);
     text-decoration: none;
@@ -216,7 +216,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .topbar-btn {
     position: relative;
     z-index: 2;
-    padding: 8px 18px;
+    padding: 6px 18px;
     display: flex;
     align-items: center;
     font-family: 'Syne', sans-serif;
@@ -234,12 +234,12 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .topbar-btn svg {
-    width:25px;
+    width:22px;
     height: 25px;
 }
 
 .topbar-btn:last-child {
-    margin-right: 20px;
+    margin-right: 24px;
 }
 
 .topbar-btn:hover {
@@ -286,6 +286,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 #s1 {
     background: var(--White);
+    
 }
 
 .s1-grid {
@@ -297,7 +298,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .s1-left {
     display: flex;
     flex-direction: column;
-    padding: 20px 52px 90px 56px;
+    padding: 20px 52px 100px 56px;
     justify-content: space-between;
     overflow: hidden;
 }
@@ -577,7 +578,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s2-bg-text {
     position: absolute;
-    top: 8%;
+    top: 7.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Bree Serif', serif;
@@ -839,9 +840,9 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     font-family: 'Bree serif', serif;
     font-size: 3.5rem;
     font-weight: 500;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.5em;
     color: var(--Black);
-    margin: 0 0 58px 0;
+    margin: 10px 0 58px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -858,7 +859,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s2-education-bg-text {
     position: absolute;
-    top: 8.2%;
+    top: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Bree serif', serif;
@@ -1389,6 +1390,201 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 
 
+#s5 {
+    background: var(--White);
+}
+
+.s5-body {
+    height: 100%;
+    padding: 10px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.s5-section {
+    position: relative;
+    background: var(--White);
+    color: var(--Black);
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 20px 0px 20px;
+}
+
+.s5-watermark {
+    position: absolute;
+    top: 1.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bree Serif', serif;
+    font-weight: 800;
+    font-size: 130px;
+    letter-spacing: 0.8rem;
+    color: var(--Skyblue);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.s5-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.s5-header {
+    text-align: center;
+}
+
+.s5-title {
+    font-family: 'Bree Serif', serif;
+    font-size: 75px;
+    letter-spacing: .85rem;
+    line-height: 1;
+    margin: 0 0 36px;
+    color: var(--Black);
+}
+
+.s5-vline {
+    position: relative;
+    padding: 100px 0 80px;
+}
+
+.s5-vline-track {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 10px;
+    background: var(--Lightblue);
+    transform: translateX(-50%);
+}
+
+.s5-vline-fill {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 0%;
+    border-radius: 10px;
+    background: var(--Aqua);
+    transform: translateX(-50%);
+    transition: height 0.15s linear;
+    box-shadow: 0 0 14px rgba(0, 229, 204, 0.5);
+}
+
+.node {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 150px 1fr;
+    align-items: start;
+    margin-bottom: 86px;
+}
+
+.node:last-child {
+    margin-bottom: 0;
+}
+
+.node-num {
+    grid-column: 2;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: var(--Black);
+    color: var(--White);
+    border: 2px solid var(--Lightblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', serif;
+    font-size: 25px;
+    position: relative;
+    justify-self: center;
+    z-index: 2;
+    transition: border-color 0.5s ease, color 0.5s ease, background 0.5s ease, box-shadow 0.5s ease, transform 0.5s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.node.lit .node-num {
+    border-color: var(--Aqua);
+    color: var(--Black);
+    background: var(--Aqua);
+    box-shadow: 0 0 0 8px rgba(0, 229, 204, 0.15), 0 0 24px rgba(0, 229, 204, 0.4);
+    transform: scale(1.08);
+}
+
+.node-card {
+    text-align: center;
+    background: var(--Lightblue);
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.30), 0px 1px 3px 1px rgba(0,0,0,0.15);
+    padding: 50px 40px;
+    opacity: 0.35;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.5s ease;
+}
+
+.node.lit .node-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.node:nth-child(odd) .node-card {
+    grid-column: 1;
+    margin-top: -65px;
+}
+
+.node:nth-child(even) .node-card {
+    grid-column: 3;
+}
+
+.node-year {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--Aqua);
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+
+.node-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 25px;
+    line-height: 1.3;
+    color: var(--Black);
+    margin: 0 0 15px;
+}
+
+.node-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    color: var(--Black);
+    margin-bottom: 12px;
+}
+
+.node-description {
+    font-family: 'Lora', serif;;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--Black);
+    margin-bottom: 10px;
+}
+
+.node-tag {
+    display: inline-block;
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--Aqua);
+    margin-top: 12px;
+}
+
+
 
 #s8 {
     background: var(--White);
@@ -1402,7 +1598,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .s8-left {
-    padding: 75px 38px 100px 55px;
+    padding: 75px 38px 40px 55px;
     display: flex;
     flex-direction: column;
 }
@@ -1529,7 +1725,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s8-form-wrap {
     flex: 1;
-    padding: 0 55px 40px 0;
+    padding: 30px 55px 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1638,7 +1834,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .s8-footer {
     grid-column: 1 / -1;
     background: var(--Lightblue);
-    padding: 12px 48px;
+    padding: 15px 48px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8rem;
     font-weight: 500;

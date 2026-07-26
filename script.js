@@ -78,6 +78,48 @@ function go(next) {
 
 
 
+(function(){
+  var section = document.querySelector('#s5 .s5-section');
+  var scrollHost = document.querySelector('#s5 .s5-body');
+  var vline = section.querySelector('.s5-vline');
+  var vlinefill = section.querySelector('#vline-fill');
+  var nodes = section.querySelectorAll('.node');
+  var total = nodes.length;
+  var ticking = false;
+
+  function update(){
+    ticking = false;
+    var rect = vline.getBoundingClientRect();
+    var hostRect = scrollHost.getBoundingClientRect();
+    var viewH = hostRect.height;
+
+    var progress = (viewH * 0.55 - (rect.top - hostRect.top)) / rect.height;
+    progress = Math.max(0, Math.min(1, progress));
+
+    vlinefill.style.height = (progress * 100) + '%';
+
+    nodes.forEach(function(node, i){
+      var threshold = (i + 0.1) / total;
+      if(progress >= threshold){
+        node.classList.add('lit');
+      }
+    });
+  }
+
+  function onScroll(){
+    if(!ticking){
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  scrollHost.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+
+
+
 function sendMsg() {
   const n = document.getElementById('fn').value;
   const e = document.getElementById('fe').value;
