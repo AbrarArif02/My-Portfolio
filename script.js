@@ -120,20 +120,92 @@ function go(next) {
 
 
 
+(function () {
+  var overlay = document.getElementById('articleModalOverlay');
+  var modalImg = document.getElementById('articleModalImg');
+  var modalCategory = document.getElementById('articleModalCategory');
+  var modalTitle = document.getElementById('articleModalTitle');
+  var modalDate = document.getElementById('articleModalDate');
+  var modalDesc = document.getElementById('articleModalDescription');
+
+  function openModal(card) {
+    modalImg.src = card.getAttribute('data-img');
+    modalCategory.textContent = card.getAttribute('data-category');
+    modalTitle.textContent = card.getAttribute('data-title');
+    modalDate.textContent = card.getAttribute('data-date');
+    modalDesc.textContent = card.getAttribute('data-full');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.article-read').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      openModal(link.closest('.article-card'));
+    });
+  });
+
+  document.getElementById('articleModalClose').addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+
+
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz5HyhQPtTmygkHhr9bBM_l3z1l6WanX5P8WmyYpgt1bxEbYPfmNLmsbRcEQWJ3kERaRw/exec";
+
 function sendMsg() {
   const n = document.getElementById('fn').value;
   const e = document.getElementById('fe').value;
   const m = document.getElementById('fm').value;
 
-  if (!n || !e || !m) { 
-    alert('Please fill all fields.'); 
-    return; 
+  if (!n || !e || !m) {
+    alert('Please fill all fields.');
+    return;
   }
 
-  document.getElementById('formWrap').innerHTML =
-     `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:2rem;color:var(--Aqua);">✓</div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--Black)">Message Received</div>
-        <div style="font-family:'Lora',serif;font-style:italic;font-size:0.8rem;color:var(--Gray)">I'll reply within 24 hours.</div>
-      </div>`;
+  const formData = new FormData();
+  formData.append('name', n);
+  formData.append('email', e);
+  formData.append('message', m);
+
+  const wrap = document.getElementById('formWrap');
+  const originalForm = wrap.innerHTML;
+
+  wrap.innerHTML =
+    `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px">
+      <svg class="f-spinner-svg" viewBox="0 0 44 44">
+        <circle class="f-spinner-track" cx="22" cy="22" r="18" fill="none" stroke-width="3"></circle>
+        <circle class="f-spinner-arc" cx="22" cy="22" r="18" fill="none" stroke-width="3"></circle>
+      </svg>
+      <div style="font-family:'Syne',sans-serif;font-size:1.6rem;letter-spacing:0.15em;font-weight:600;color:var(--Black)">Sending Message</div>
+      <div style="font-family:'Lora',serif;font-style:italic;font-size:1.1rem;letter-spacing:0.09em;font-weight:500;color:var(--Black)">This will just take a moment.</div>
+    </div>`;
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    body: formData
+  })
+    .then(() => {
+      wrap.innerHTML =
+        `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px">
+          <div style="font-family:'Syne',sans-serif;font-size:4rem;color:var(--Aqua);">✓</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:600;letter-spacing:0.14em;color:var(--Black)">Message Received</div>
+          <div style="font-family:'Lora',serif;font-style:italic;font-weight: 500;font-size:1.1rem;letter-spacing:0.12em;color:var(--Black)">I'll reply within 24 hours.</div>
+        </div>`;
+    })
+    .catch(() => {
+      wrap.innerHTML = originalForm;
+      alert('Something went wrong sending your message. Please try again or email me directly.');
+    });
 }

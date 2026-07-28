@@ -163,16 +163,17 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     align-items: center;
     justify-content: space-between;
     height: 90px;
+    z-index: 0;
 }
 
 .topbar-teal {
     position: absolute;
     top: 0;
-    right: 2.8%;
+    right: 2.45%;
     width: 286px;
     height: 100%;
     background: var(--Aqua);
-    z-index: 1;
+    z-index: -1;
     opacity: 1;
     visibility: visible;
     transition: opacity var(--slide-dur) var(--ease), visibility var(--slide-dur) var(--ease);
@@ -205,7 +206,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .topbar-center {
-    padding-right: 35px;
+    padding-right: 30px;
     display: flex;
     align-items: center;
     height: 100%;
@@ -215,7 +216,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .topbar-btn {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding: 6px 18px;
     display: flex;
     align-items: center;
@@ -255,7 +256,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .topbar-btn::after {
     content: attr(data-label);
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 6px);
     left: 50%;
     transform: translateX(-50%);
     background: var(--Black);
@@ -516,7 +517,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .teal-frame {
     position: absolute;
     top: 0;
-    left: -3.5%;
+    left: -1.5%;
     width: 110%;
     height: 70%;
     background: var(--Aqua);
@@ -526,7 +527,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .photo-outline {
     position: absolute;
     top: -0.5%;
-    right: 31%;
+    right: 28.5%;
     width: 310px;
     height: 86%;
     border: 3px solid var(--Aqua);
@@ -536,7 +537,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .photo-frame {
     position: absolute;
     top: 15px;
-    right: 35%;
+    right: 33%;
     width: 280px;
     height: 80%;
 }
@@ -566,6 +567,8 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 #s2 .slide-body {
     overflow-y: auto;
+    scrollbar-width: none;
+    padding: 0 12px 0 0;
 }
 
 .s2-intro {
@@ -838,11 +841,11 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s2-section-label {
     font-family: 'Bree serif', serif;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 500;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.4em;
     color: var(--Black);
-    margin: 10px 0 58px 0;
+    margin: 10px 0 58px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -859,13 +862,13 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s2-education-bg-text {
     position: absolute;
-    top: 9%;
-    left: 50%;
+    top: 10%;
+    left: 51%;
     transform: translate(-50%, -50%);
     font-family: 'Bree serif', serif;
     font-weight: 800;
     font-size: 150px;
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.3rem;
     color: var(--Skyblue);
     z-index: 0;
     pointer-events: none;
@@ -878,7 +881,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     max-width: 1100px;
-    margin: 50px 145px;
+    margin: 50px auto;
     position: relative;
     z-index: 1; 
 }
@@ -1019,9 +1022,10 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .s3-body {
     height: 100%;
-    padding: 20px 40px 50px 55px;
+    padding: 20px 50px 50px 50px;
     overflow-y: auto;
     position: relative;
+    scrollbar-width: none; 
 }
 
 .s3-header {
@@ -1056,7 +1060,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .s3-watermark {
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 40px;
     font-family: 'Bree Serif', serif;
     font-weight: 800;
     font-size: 8rem;
@@ -1191,6 +1195,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    scrollbar-width: none; 
 }
 
 .s4-header {
@@ -1233,7 +1238,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 0 40px 0 50px;
+    padding: 0 50px 0 50px;
 }
 
 .s4-row {
@@ -1400,6 +1405,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    scrollbar-width: none; 
 }
 
 .s5-section {
@@ -1516,7 +1522,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 
 .node-card {
     text-align: center;
-    background: var(--card-bg);
+    background: var(--Lightblue);
     border-radius: 10px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.30), 0px 1px 3px 1px rgba(0,0,0,0.15);
     padding: 50px 40px;
@@ -1582,6 +1588,290 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     text-transform: uppercase;
     color: var(--Aqua);
     margin-top: 12px;
+}
+
+
+
+#s6 {
+    background: var(--White);
+}
+
+.s6-body {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 56px;
+    scrollbar-width: none;
+}
+
+
+.s6-header-wrap {
+    position: relative;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.s6-watermark {
+    position: absolute;
+    top: 28.7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bree Serif', serif;
+    font-weight: 800;
+    font-size: 130px;
+    letter-spacing: 0.9rem;
+    color: var(--Skyblue);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    font-style: italic;
+}
+
+.s6-header {
+    position: relative;
+    z-index: 1;
+    margin: 22px 0 0 0 ;
+    font-family: 'Bree Serif', serif;
+    font-weight: 800;
+    font-size: 70px;
+    letter-spacing: 1rem;
+    font-style: italic;
+}
+
+.s6-subheader {
+    position: relative;
+    z-index: 1;
+    margin: 24px 0 40px;
+    font-size: 30px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+}
+
+.s6-subheader span{
+    color: var(--Aqua);
+}
+
+.article-grid {
+    max-width: 1440px;
+    margin: 0 52px 0 52px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.article-card {
+    background: var(--Lightblue);
+    border: 1px solid var(--Aqua);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.article-card:hover{
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:0 18px 34px rgba(30,42,40,0.14);
+}
+
+.article-card .img-wrap{
+    overflow:hidden;
+}
+
+.article-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display:block;
+    transition:transform 0.4s ease;
+}
+
+.article-card:hover img{
+    transform:scale(1.08);
+}
+
+.article-body {
+    padding: 22px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.article-category {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--Aqua);
+    margin: 5px 0 15px 0;
+}
+
+.article-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+    margin: 0 0 10px;
+}
+
+.article-description {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+    margin: 0 0 20px;
+    font-weight: 500;
+}
+
+.article-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid var(--Aqua);
+    padding-top: 20px;
+    margin-top: auto;
+}
+
+.article-date {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.article-read {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: var(--Aqua);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: none;
+    padding: 6px 12px;
+    margin: -6px -12px;
+    border-radius: 20px;
+    gap: 6px;
+    transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.article-read:hover {
+    transform:scale(0.88);
+    background: var(--Aqua);
+    color: var(--White);
+}
+
+
+.article-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 24, 22, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 1000;  
+}
+
+.article-modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.article-modal {
+    background: var(--card-bg);
+    max-width: 700px;
+    width: 100%;
+    max-height: 650px;
+    overflow-y: auto;
+    border-radius: 6px;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.4s ease;
+    scrollbar-width: none;  
+}
+
+.article-modal-overlay.open .article-modal {
+    transform: translateY(0) scale(1);
+}
+
+.article-modal img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-modal-body {
+    padding: 32px 32px 10px;
+}
+
+.article-modal-category {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    color: var(--Aqua);
+    margin-bottom: 15px;
+}
+
+.article-modal-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.3;
+    color: var(--Black);
+    margin: 0 0 15px;
+}
+
+.article-modal-date {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--Black);
+    letter-spacing: 0.1rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.article-modal-description {
+    font-family: 'Syne', sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+    white-space:pre-line;
+}
+
+.article-modal-close {
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+    margin: 19px 250px 20px;
+    background: rgba(30, 42, 40, 0.75);
+    color: var(--White);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: none;
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.article-modal-close:hover {
+    transform: scale(1.09);
+    background: var(--Black);
 }
 
 
@@ -1759,7 +2049,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 }
 
 .form-field-label {
-    font-family: 'Syne', serif;
+    font-family: 'Syne', sans-serif;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.2em;
@@ -1799,7 +2089,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     background: var(--Black);
     color: var(--White);
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1842,4 +2132,47 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     letter-spacing: 0.06em;
     display: flex;
     justify-content: center;
+}
+
+.f-spinner-svg {
+    width: 50px;
+    height: 50px;
+    animation: f-rotate 1.6s linear infinite;
+}
+
+.f-spinner-track {
+    stroke: var(--Black);
+    opacity: 0.12;
+}
+
+.f-spinner-arc {
+    stroke: var(--Aqua);
+    stroke-linecap: round;
+    stroke-dasharray: 113;
+    stroke-dashoffset: 100;
+    transform-origin: center;
+    animation: f-dash 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes f-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes f-dash {
+    0% {
+        stroke-dashoffset: 100;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        stroke-dashoffset: 50;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+        transform: rotate(360deg);
+    }
 }
