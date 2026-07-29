@@ -188,15 +188,46 @@ function go(next) {
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz5HyhQPtTmygkHhr9bBM_l3z1l6WanX5P8WmyYpgt1bxEbYPfmNLmsbRcEQWJ3kERaRw/exec";
 
-function sendMsg() {
-  const n = document.getElementById('fn').value;
-  const e = document.getElementById('fe').value;
-  const m = document.getElementById('fm').value;
+function showWarning(message) {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Missing Information',
+    text: message,
+    confirmButtonText: 'OK',
+    customClass: {
+      popup: 'swal-custom-popup',
+      title: 'swal2-title',
+      htmlContainer: 'swal2-html-container',
+      confirmButton: 'swal2-confirm'
+    }
+  });
+}
 
-  if (!n || !e || !m) {
-    alert('Please fill all fields.');
-    return;
-  }
+function showError(message) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Send Failed',
+    text: message,
+    confirmButtonText: 'OK',
+    customClass: {
+      popup: 'swal-custom-popup',
+      title: 'swal2-title',
+      htmlContainer: 'swal2-html-container',
+      confirmButton: 'swal2-confirm'
+    }
+  });
+}
+
+function sendMsg() {
+  const n = document.getElementById('fn').value.trim();
+  const e = document.getElementById('fe').value.trim();
+  const m = document.getElementById('fm').value.trim();
+
+
+  if (!n) return showWarning('Please fill your name.');
+  if (!e) return showWarning('Please fill your email.');
+  if (!m) return showWarning('Please fill your message.');
+
 
   const formData = new FormData();
   formData.append('name', n);
@@ -230,6 +261,6 @@ function sendMsg() {
     })
     .catch(() => {
       wrap.innerHTML = originalForm;
-      alert('Something went wrong sending your message. Please try again or email me directly.');
+      showError('Something went wrong. Please try again.');
     });
 }

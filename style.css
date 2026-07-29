@@ -2426,3 +2426,38 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
         transform: rotate(360deg);
     }
 }
+
+
+.swal2-title {
+    font-family: 'Syne', sans-serif !important;
+    font-size: 1.7rem !important;
+    letter-spacing: 0.1em;
+    font-weight: 600 !important;
+    color: var(--Black) !important;
+}
+
+.swal2-html-container {
+    font-family: 'Lora', serif !important;
+    font-style: italic;
+    font-size: 1.2em !important;
+    letter-spacing: 0.08em;
+    font-weight: 500 !important;
+    color: var(--Black) !important;
+}
+
+.swal2-confirm {
+  font-family: 'Syne', sans-serif !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: none !important;
+  background: var(--Black) !important;
+  box-shadow: none !important;
+  transition: transform 0.4s ease;
+}
+
+
+.swal2-styled.swal2-confirm:hover {
+  transform: scale(1.09) !important;
+  background: var(--Aqua) !important;
+}
