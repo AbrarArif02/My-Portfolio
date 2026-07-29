@@ -20,7 +20,6 @@ loop();
 
 
 
-
 const slides = [...document.querySelectorAll('.slide')];
 const topBars = [...document.querySelectorAll('.topbar-btn')];
 const dots    = [...document.querySelectorAll('.sdot')];
@@ -75,6 +74,8 @@ function go(next) {
 
   }, Duration);
 }
+
+
 
 
 
@@ -157,6 +158,29 @@ function go(next) {
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeModal();
+  });
+})();
+
+
+
+(function(){
+  document.querySelectorAll('.s7-item').forEach(function(item){
+    var more = item.querySelector('.s7-abstract-more');
+    var moreInner = more.querySelector('p');
+
+    item.addEventListener('click', function(e){
+      if(e.target.closest('.s7-info')) return;
+      e.stopPropagation(); 
+
+      var isOpen = item.classList.contains('expanded');
+      if(isOpen){
+        more.style.maxHeight = '0px';
+        item.classList.remove('expanded');
+      } else {
+        item.classList.add('expanded');
+        more.style.maxHeight = moreInner.scrollHeight + 40 + 'px';
+      }
+    });
   });
 })();
 
