@@ -1,23 +1,19 @@
-
-
-
-
 # Abrar Arif - Portfolio
 
-# 📋 Overview
+## 📋 Overview
 A personal portfolio website showcasing my work as a Frontend Web Developer and DSA enthusiast. Built as a single-page, section-based website with smooth navigation across the Home, About, Projects, Skills, Achievements, Blog, Publications, and Contact sections.
    - Static, vanilla HTML/CSS/JavaScript portfolio
    - No build tools or frameworks required
    - Top bar navigation switches between full-page slide sections (`go(0)` through `go(7)`)
    - Each section has its own layout and animations
 
-# 🔗 Live site: 
+## Live site: 
    - https://abrararif02.github.io/My-Portfolio/
-# 🔗 Figma Linki: 
+## Figma Linki: 
    - https://www.figma.com/design/q2F7BKtAmIpRqY2ye94tRY/My-Portfolio?node-id=0-1&t=61LTEBFalXfY0cwA-1
 
 
-# ✨ Key Features
+## ✨ Key Features
 
 - **Single-page slide navigation** — top bar switches between 8 full-screen sections without page reloads
 
@@ -40,7 +36,7 @@ A personal portfolio website showcasing my work as a Frontend Web Developer and 
 - **SweetAlert2 integration** — styled alert/notification popups
 
 
-# 📊 Sections
+## 📊 Sections
 
 - **Home:**
   - Intro and tagline
@@ -85,7 +81,7 @@ A personal portfolio website showcasing my work as a Frontend Web Developer and 
   - Email and social links to get in touch
 
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
 - **Frontend:**
   - HTML5 — semantic structure
