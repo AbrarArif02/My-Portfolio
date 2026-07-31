@@ -839,6 +839,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     }
 }
 
+
 .s2-section-label {
     font-family: 'Bree serif', serif;
     font-size: 4.5rem;
@@ -851,7 +852,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     justify-content: center;
     gap: 12px;
     position: relative;
-    z-index: 1;           
+    z-index: 1;      
 }
 
 .s2-education-section {
@@ -2376,12 +2377,18 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
     background: var(--Lightblue);
     padding: 15px 48px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.9rem;
     color: var(--Black);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.2em;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.s8-footer p {
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .f-spinner-svg {
@@ -2460,4 +2467,30 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .swal2-styled.swal2-confirm:hover {
   transform: scale(1.09) !important;
   background: var(--Aqua) !important;
+}
+
+
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.slide.active .s1-intro {
+    animation: fadeSlideUp .6s ease .1s both;
+}
+
+.slide.active .s1-h1 {
+    animation: fadeSlideUp .7s ease .2s both;
+}
+
+.slide.active .s1-description {
+    animation: fadeSlideUp .6s ease .35s both;
 }

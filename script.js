@@ -186,6 +186,111 @@ function go(next) {
 
 
 
+function findScrollable(root) {
+  if (!root) return null;
+  if (root.scrollHeight > root.clientHeight + 2) return root;
+  const candidates = root.querySelectorAll('*');
+  for (const el of candidates) {
+    const style = getComputedStyle(el);
+    if (
+      (style.overflowY === 'auto' || style.overflowY === 'scroll') &&
+      el.scrollHeight > el.clientHeight + 2
+    ) {
+      return el;
+    }
+  }
+  return null;
+}
+ 
+function blockedByScroll(deltaY) {
+  const slide = slides[current];
+  const scrollEl = findScrollable(slide);
+  if (!scrollEl) return false;
+ 
+  if (deltaY > 0 && scrollEl.scrollTop + scrollEl.clientHeight < scrollEl.scrollHeight - 4) return true;
+  if (deltaY < 0 && scrollEl.scrollTop > 4) return true;
+  return false;
+}
+ 
+
+function isOverlayOpen() {
+  const articleOverlay = document.getElementById('articleModalOverlay');
+  return !!(articleOverlay && articleOverlay.classList.contains('open'));
+}
+ 
+let lastW = 0;
+window.addEventListener('wheel', e => {
+  if (isOverlayOpen()) return;
+  if (blockedByScroll(e.deltaY)) return;
+ 
+  const now = Date.now();
+  if (now - lastW < Duration + 100) return;
+  lastW = now;
+ 
+  go(current + (e.deltaY > 0 ? 1 : -1));
+}, { passive: true });
+ 
+
+let lastK = 0;
+window.addEventListener('keydown', e => {
+  if (isOverlayOpen()) return;
+ 
+  const tag = document.activeElement?.tagName;
+  const isEditable = tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable;
+  if (isEditable) return; 
+
+  const forward = ['ArrowRight', 'ArrowDown'].includes(e.code);
+  const backward = ['ArrowLeft', 'ArrowUp'].includes(e.code);
+  if (!forward && !backward) return;
+ 
+  const now = Date.now();
+  if (now - lastK < Duration + 100) return;
+  lastK = now;
+ 
+  e.preventDefault();
+  go(current + (forward ? 1 : -1));
+});
+ 
+let ts = 0;
+window.addEventListener('touchstart', e => { ts = e.touches[0].clientY; }, { passive: true });
+window.addEventListener('touchend', e => {
+  if (isOverlayOpen()) return;
+ 
+  const dy = ts - e.changedTouches[0].clientY;
+  if (Math.abs(dy) > 50) go(current + (dy > 0 ? 1 : -1));
+}, { passive: true });
+
+
+
+const roles = ['CSE Student • Frontend Web Developer • Problem Solver • DSA Enthusiast'];
+let ri = 0, ci = 0, del = false;
+const tg = document.getElementById('taglines');
+tg.textContent = '';
+function type() {
+  const word = roles[ri];
+
+  if (!del) {
+    tg.textContent = word.slice(0, ++ci);
+    if (ci === word.length) { 
+      del = true; 
+      setTimeout(type, 2200); 
+      return; 
+    }
+    setTimeout(type, 30 + Math.random() * 40);
+  } else {
+    tg.textContent = word.slice(0, --ci);
+    if (ci === 0) { 
+      del = false; 
+      ri = (ri + 1) % roles.length; 
+      setTimeout(type, 400); return; 
+    }
+    setTimeout(type, 30);
+  }
+}
+type();
+
+
+
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz5HyhQPtTmygkHhr9bBM_l3z1l6WanX5P8WmyYpgt1bxEbYPfmNLmsbRcEQWJ3kERaRw/exec";
 
 function showWarning(message) {
@@ -224,10 +329,19 @@ function sendMsg() {
   const m = document.getElementById('fm').value.trim();
 
 
-  if (!n) return showWarning('Please fill your name.');
-  if (!e) return showWarning('Please fill your email.');
-  if (!m) return showWarning('Please fill your message.');
+  const missing = [];
+  if (!n) missing.push('name');
+  if (!e) missing.push('email');
+  if (!m) missing.push('message');
 
+  if (missing.length === 3) return showWarning('Please fill all fields.');
+
+  if (missing.length > 0) {
+    const fieldList = missing.length === 2 ? missing.join(' and ') : missing[0];
+    showWarning(`Please fill your ${fieldList}.`);
+    return;
+  }
+  
 
   const formData = new FormData();
   formData.append('name', n);
