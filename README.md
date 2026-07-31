@@ -4,7 +4,7 @@
 A personal portfolio website showcasing my work as a Frontend Web Developer and DSA enthusiast. Built as a single-page, section-based website with smooth navigation across the Home, About, Projects, Skills, Achievements, Blog, Publications, and Contact sections.
    - Static, vanilla HTML/CSS/JavaScript portfolio
    - No build tools or frameworks required
-   - Top bar navigation switches between full-page slide sections (`go(0)` through `go(7)`)
+   - Top bar navigation switches between full-page slide sections
    - Each section has its own layout and animations
 
 ## Live site: 
@@ -111,7 +111,7 @@ My-Portfolio/
 ├── index.html      # Main page markup and content
 ├── style.css       # Styling
 └── script.js       # Navigation logic and interactivity
-└── script.js       # Navigation logic and interactivity
+└── README.md       # Documentation
 ```
 
 
